@@ -33,6 +33,10 @@ input:focus {
     text-align: center;
 }
 
+button {
+    margin-left : 5px;
+}
+
 h1{
     margin : 30px;
 } 
