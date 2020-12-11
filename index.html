@@ -2,27 +2,27 @@
 <html>
   <head>
     <link rel="icon" href="imgs/list.png"/>
+    <link rel="stylesheet" href="style.css"/>
     <title>List</title>
     <meta charset="UTF-8" />
   </head>
 
   <body>
     <h1>Tasks</h1>
-
     <form id="js-form">
       <input type="text" placeholder="Add task" />
     </form>
+    <div class="container">
+        <div class="list">
+        <h3>Pending</h3>
+            <ul id="js-pending"></ul>
+        </div>
 
-    <div>
-      <h3>Pending</h3>
-      <ul id="js-pending"></ul>
+        <div class="list">
+        <h3>Finished</h3>
+            <ul id="js-finished"></ul>
+        </div>
     </div>
-
-    <div>
-      <h3>Finished</h3>
-      <ul id="js-finished"></ul>
-    </div>
-
     <script src="index.js"></script>
   </body>
 </html>
