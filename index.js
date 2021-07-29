@@ -79,6 +79,15 @@ function handleBackClick(e) {
   saveState();
 }
 
+function paintPendingTask(task) {
+  const genericLi = buildGenericLi(task);
+  const completeBtn = document.createElement("button");
+  completeBtn.innerText = "✅";
+  completeBtn.addEventListener("click", handleFinishClick);
+  genericLi.append(completeBtn);
+  pendingList.append(genericLi);
+}
+
 function buildGenericLi(task) {
   const li = document.createElement("li");
   const span = document.createElement("span");
@@ -89,15 +98,6 @@ function buildGenericLi(task) {
   li.append(span, deleteBtn);
   li.id = task.id;
   return li;
-}
-
-function paintPendingTask(task) {
-  const genericLi = buildGenericLi(task);
-  const completeBtn = document.createElement("button");
-  completeBtn.innerText = "✅";
-  completeBtn.addEventListener("click", handleFinishClick);
-  genericLi.append(completeBtn);
-  pendingList.append(genericLi);
 }
 
 function paintFinishedTask(task) {
